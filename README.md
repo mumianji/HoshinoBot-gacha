@@ -83,6 +83,8 @@ java -jar cqhttp-mirai-0.2.0-fix1-embedded-all.jar
 cd&&git clone https://github.com/Ice-Cirno/HoshinoBot.git
 cd HoshinoBot&&cp -r hoshino/config_example/hoshino/config
 pip3 install -r requirements.txt
+#install other pack（Optional，run faster）
+pip3 install msgpack ujson python-Levenshtein
 screen -S Hoshino
 python3 run.py
 ```
