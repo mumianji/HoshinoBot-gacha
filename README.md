@@ -3,15 +3,17 @@
 
 ## 使用
 
+各取所需即可。
+
 ### v1
 
-默认分支是v1，若您的Hoshino是v1您可以直接替换相应文件。
+v1版本相关文件：priconne.py
 
 ### v2
 
-若您的Hoshino是v2版本，您需要切换到v2分支替再替换相应文件。
+v2版本相关文件：_pcr_data.py
 
-抄了一份部署教程：
+# 抄了一份部署教程：
 
 ## How to install HoshinoBot：
 
