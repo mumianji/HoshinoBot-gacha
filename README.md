@@ -11,7 +11,9 @@
 
 若您的Hoshino是v2版本，您需要切换到v2分支替再替换相应文件。
 
-## HoshinoBot的建议安装流程：
+## How to install HoshinoBot：
+
+system>=CentOS 7.6
 
 ### python install
 
