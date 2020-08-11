@@ -76,7 +76,7 @@ screen -S mirai
 java -jar cqhttp-mirai-0.2.0-fix1-embedded-all.jar
 ```
 
-## Estonteco install 
+## HoshinoBot install 
 ```bash
 cd&&git clone https://github.com/Ice-Cirno/HoshinoBot.git
 cd HoshinoBot&&cp -r hoshino/config_example/hoshino/config
