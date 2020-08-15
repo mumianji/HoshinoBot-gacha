@@ -84,11 +84,39 @@ cd&&git clone https://github.com/Ice-Cirno/HoshinoBot.git
 cd HoshinoBot&&cp -r hoshino/config_example /hoshino/config
 pip3 install -r requirements.txt
 
+#custom your bot setting
+vim hoshino/config/__bot__.py
+
 #install other pack（Optional，run faster）
 pip3 install msgpack ujson python-Levenshtein
 
 screen -S Hoshino
 python3 run.py
+
+#Then use `Ctrl+C` to exit this process
 ```
+
+## yobot install
+
+### I suggest you use the normal method to install
+
+```bash
+cd ~&&git clone https://github.com/pcrbot/yobot.git
+pip3 install -r yobot/scr/client/requirements.txt
+screen -S yobot
+python3 yobot/scr/client/main.py
+sh yobot/scr/client/yobotg.sh
+
+#Then use `Ctrl+C` to exit this process
+```
+
+Then, you need to modify the configuration so that the yobot is connected
+
+```bash
+vim mirai/plugins/setting.yml
+```
+
+You need to cancel the comment from line 21 to line 27 and reboot mirai
+
 
 Finish.
