@@ -76,6 +76,8 @@ debug: false
 ```bash
 screen -S mirai
 java -jar cqhttp-mirai-0.2.1-embedded-all.jar
+
+#Then,use `Ctrl+a,d` to keep this process
 ```
 
 ## HoshinoBot install 
@@ -93,7 +95,7 @@ pip3 install msgpack ujson python-Levenshtein
 screen -S Hoshino
 python3 run.py
 
-#Then use `Ctrl+C` to exit this process
+#Then,use `Ctrl+a,d` to keep this process
 ```
 
 ## yobot install
@@ -107,7 +109,7 @@ screen -S yobot
 python3 yobot/scr/client/main.py
 sh yobot/scr/client/yobotg.sh
 
-#Then use `Ctrl+C` to exit this process
+#Then,use `Ctrl+a,d` to keep this process
 ```
 
 Then, you need to modify the configuration so that the yobot is connected
@@ -118,5 +120,19 @@ vim mirai/plugins/setting.yml
 
 You need to cancel the comment from line 21 to line 27 and reboot mirai
 
+### You can also install yobot in the form of plugins
+
+```bash
+cd ~/HoshinoBot/hoshino/modules&&mkdir yobot&&cd yobot
+git init&&git submodule add https://github.com/pcrbot/yobot.git
+pip3 install -r scr/client/requirements.txt
+
+vim ~HoshinoBot/hoshino/config/__bot__.py
+#add `yobot` to the MODULE_ON and reboot HoshinoBot
+
+#shut down your HoshinoBot
+vim ~HoshinoBot/hoshino/modules/yobot/yobot/scr/client/yobot_data/yobot_config.json
+#you need to change '9222' in 'public_address' to '8080' and reboot Hoshinobot
+```
 
 Finish.
