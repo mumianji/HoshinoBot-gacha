@@ -88,10 +88,10 @@ cd&&git clone https://github.com/Ice-Cirno/HoshinoBot.git
 cd HoshinoBot&&cp -r hoshino/config_example /hoshino/config
 pip3 install -r requirements.txt
 
-#custom your bot setting
+#自定义你的 bot 设置
 vim hoshino/config/__bot__.py
 
-#install other pack（Optional，run faster）
+#安装其他非必须依赖（可选，使 bot 运行更丝滑）
 pip3 install msgpack ujson python-Levenshtein
 
 screen -S Hoshino
@@ -119,7 +119,7 @@ sh yobot/scr/client/yobotg.sh
 vim mirai/plugins/setting.yml
 ```
 
-取消掉第 21 行到第 27 行的注释
+取消掉第 22 行到第 28 行的注释
 
 ### 作为 Hoshino 的插件运行 (可选)
 
@@ -131,9 +131,51 @@ pip3 install -r scr/client/requirements.txt
 vim ~HoshinoBot/hoshino/config/__bot__.py
 #在 MODULES_ON 里添加 'yobot'
 
-#shut down your HoshinoBot
+#关掉Hoshino，然后
 vim ~HoshinoBot/hoshino/modules/yobot/yobot/scr/client/yobot_data/yobot_config.json
 #修改 'public_address' 中的端口，9222 修改为 8080
+```
+
+## 安装以 Hoshino 为框架的其他功能
+
+```bash
+cd ~/HoshinoBot/hoshino/modules&&mkdir custom&&cd custom&&git init&&git clone https://github.com/Lancercmd/Landsol-Distrust.git&&git clone https://github.com/Lancercmd/Reloader.git
+
+vim ~HoshinoBot/hoshino/config/__bot__.py
+#在 MODULES_ON 里添加 'custom'
+```
+
+## 安装 CQ-picsearcher-robot
+
+### 安装 nodejs
+
+```bash
+curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+yum install nodejs -y
+```
+
+### 修改 CQHTTPMirai 的配置文件使得 Mirai 能连接上 CQ-picsearcher-robot
+
+```bash
+vim mirai/plugins/setting.yml
+```
+
+第三十行 enable 修改为 true ，并重启 mirai 
+
+### 安装 CQ-picsearcher-robot
+
+```bash
+https://github.com/Tsuk1ko/cq-picsearcher-bot.git&&cd cq-picsearcher-bot&&npm install -g yarn&&npm install -g pm2&&yarn install
+
+#自定义 bot 配置
+cp config.default.json config.json&&vim config.json
+#必要的修改：
+#第 15 行 admin 字段中的 -1 修改为你自己的QQ号(作为主人)
+
+#启动
+yarn start
+
+#bot会在20秒内通知你 已上线 
 ```
 
 Finish.
