@@ -178,4 +178,10 @@ yarn start
 #bot会在20秒内通知你 已上线 
 ```
 
+## 安装 Koishi
+
+```bash
+编写中···
+```
+
 Finish.
