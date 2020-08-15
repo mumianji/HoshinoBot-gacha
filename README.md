@@ -25,10 +25,10 @@ system>=CentOS 7.6
 yum -y update&&yum -y groupinstall "Development tools"&&yum -y install wget zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc* libffi-devel make git java vim screen&&wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz&&tar -zxvf Python-3.8.5.tgz&&cd Python-3.8.5&&./configure&&make&&make install&&pip3 install --upgrade pip&&cd
 ```
 
-### miraiOK install
+### CQHTTPMirai install
 
 ```bash
-mkdir mirai&&cd mirai&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.2.0/cqhttp-mirai-0.2.0-fix1-embedded-all.jar&&java -jar cqhttp-mirai-0.2.0-fix1-embedded-all.jar
+mkdir mirai&&cd mirai&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.2.1/cqhttp-mirai-0.2.1-embedded-all.jar&&java -jar cqhttp-mirai-0.2.1-embedded-all.jar
 #Then use `Ctrl+C` to exit this process
 vim plugins/setting.yml
 ```
@@ -75,14 +75,18 @@ debug: false
 
 ```bash
 screen -S mirai
-java -jar cqhttp-mirai-0.2.0-fix1-embedded-all.jar
+java -jar cqhttp-mirai-0.2.1-embedded-all.jar
 ```
 
 ## HoshinoBot install 
 ```bash
 cd&&git clone https://github.com/Ice-Cirno/HoshinoBot.git
-cd HoshinoBot&&cp -r hoshino/config_example/hoshino/config
+cd HoshinoBot&&cp -r hoshino/config_example /hoshino/config
 pip3 install -r requirements.txt
+
+#install other pack（Optional，run faster）
+pip3 install msgpack ujson python-Levenshtein
+
 screen -S Hoshino
 python3 run.py
 ```
