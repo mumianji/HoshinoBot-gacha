@@ -124,7 +124,7 @@ sh yobot/scr/client/yobotg.sh
 然后，更改 CQHTTPMirai 的配置文件使得 yobot 能被 mirai 连接
 
 ```bash
-vim mirai/plugins/setting.yml
+vim ~/mirai/plugins/setting.yml
 ```
 
 取消掉第 22 行到第 28 行的注释
@@ -136,11 +136,11 @@ cd ~/HoshinoBot/hoshino/modules&&mkdir yobot&&cd yobot
 git init&&git submodule add https://github.com/pcrbot/yobot.git
 pip3 install -r scr/client/requirements.txt
 
-vim ~HoshinoBot/hoshino/config/__bot__.py
+vim ~/HoshinoBot/hoshino/config/__bot__.py
 #在 MODULES_ON 里添加 'yobot'
 
 #关掉Hoshino，然后
-vim ~HoshinoBot/hoshino/modules/yobot/yobot/scr/client/yobot_data/yobot_config.json
+vim ~/HoshinoBot/hoshino/modules/yobot/yobot/scr/client/yobot_data/yobot_config.json
 #修改 'public_address' 中的端口，9222 修改为 8080
 ```
 
@@ -149,7 +149,7 @@ vim ~HoshinoBot/hoshino/modules/yobot/yobot/scr/client/yobot_data/yobot_config.j
 ```bash
 cd ~/HoshinoBot/hoshino/modules&&mkdir custom&&cd custom&&git init&&git clone https://github.com/Lancercmd/Landsol-Distrust.git&&git clone https://github.com/Lancercmd/Reloader.git
 
-vim ~HoshinoBot/hoshino/config/__bot__.py
+vim ~/HoshinoBot/hoshino/config/__bot__.py
 #在 MODULES_ON 里添加 'custom'
 ```
 
