@@ -105,7 +105,7 @@ python3 run.py
 ```bash
 cd ~&&wget -O res.tar.gz https://pan.michikawachin.art/?/bot%20resources%20and%20plugins/res.tar.gz
 tar -zxvf res.tar.gz
-mv res HoshinoBot/res
+mv res HoshinoBot
 ```
 
 ## 安装 yobot
