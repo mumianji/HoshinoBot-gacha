@@ -38,7 +38,11 @@ vim plugins/setting.yml
 
 ```yml
 debug: false
-'你用来做bot的QQ账号':
+'你用来做 bot 的账号':
+  cacheImage: false
+  heartbeat:
+    enable: false
+    interval: 15000
   http:
     enable: false
     host: 0.0.0.0
@@ -54,24 +58,24 @@ debug: false
       reversePort: 8080
       accessToken: ""
       reversePath: /ws
-    #   reverseApiPath: /api
-    #   reverseEventPath: /event
+      # reverseApiPath: /api
+      # reverseEventPath: /event
       useUniversal: true
       reconnectInterval: 3000
     # - enable: true
-    #   postMessageFormat: string
-    #   reverseHost: 127.0.0.1
-    #   reversePort: 9222
-    #   reversePath: /ws
-    #   useUniversal: false
-    #   reconnectInterval: 3000
+      # postMessageFormat: string
+      # reverseHost: 127.0.0.1
+      # reversePort: 9222
+      # reversePath: /ws
+      # useUniversal: false
+      # reconnectInterval: 3000
   ws:
     enable: false
     postMessageFormat: string
     accessToken: ""
     wsHost: "0.0.0.0"
     wsPort: 6700
-
+    
 ```
 
 ```bash
@@ -173,7 +177,7 @@ vim mirai/plugins/setting.yml
 ### 安装 CQ-picsearcher-robot
 
 ```bash
-https://github.com/Tsuk1ko/cq-picsearcher-bot.git&&cd cq-picsearcher-bot&&npm install -g yarn&&npm install -g pm2&&yarn install
+git clone https://github.com/Tsuk1ko/cq-picsearcher-bot.git&&cd cq-picsearcher-bot&&npm install -g yarn&&npm install -g pm2&&yarn install
 
 #自定义 bot 配置
 cp config.default.json config.json&&vim config.json
