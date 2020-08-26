@@ -28,7 +28,7 @@ yum -y update&&yum -y groupinstall "Development tools"&&yum -y install wget zlib
 ### 安装 CQHTTPMirai
 
 ```bash
-mkdir mirai&&cd mirai&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.2.1/cqhttp-mirai-0.2.1-embedded-all.jar&&java -jar cqhttp-mirai-0.2.1-embedded-all.jar
+mkdir mirai&&cd mirai&&wget https://github.com/yyuueexxiinngg/cqhttp-mirai/releases/download/0.2.3/cqhttp-mirai-0.2.3-embedded-all.jar
 #使用 Ctrl+C 关闭这个进程
 
 vim plugins/setting.yml
@@ -80,7 +80,7 @@ debug: false
 
 ```bash
 screen -S mirai
-java -jar cqhttp-mirai-0.2.1-embedded-all.jar
+java -jar cqhttp-mirai-0.2.3-embedded-all.jar
 
 #然后，使用 Ctrl+a,d 挂起这个窗口
 ```
